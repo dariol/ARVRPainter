@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,6 +11,7 @@ public class SceneUtil : MonoBehaviour {
 	public float speed = 1;
 	// Use this for initialization
 	void Start () {
+		UnityEngine.XR.XRSettings.showDeviceView = false;
 		tex = new Texture[planes.Length];
 		for (int i = 0; i < tex.Length; i++) {
 			tex [i] = planes [i].GetComponent<MeshRenderer> ().material.mainTexture;
